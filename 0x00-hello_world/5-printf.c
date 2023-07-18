@@ -5,8 +5,9 @@
 
 #include <stdio.h>
 
-/*
+/**
  *main - Main block.
+ *       function to print
  *Return: Always 0.
  */
 int main(void)

@@ -5,7 +5,7 @@
 
 #include <stdio.h>
 
-/*
+/**
  *main - Prints "Prints the size of various types.
  *Return: Always 0.
  */
