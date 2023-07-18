@@ -1,6 +1,6 @@
 /*
- * File: 7-print_tebahpla.c
- * Auth: Oluwashina "Sina" Stephen Mathew
+ *File: 7-print_tebahpla.c
+ *Auth: Oluwashina "Sina" Stephen Mathew
  */
 
 #include <stdio.h>
@@ -12,12 +12,12 @@
  */
 int main(void)
 {
-  char letter;
+char letter;
 
-  for (letter = 'z'; letter >= 'a'; letter--)
-    putchar(letter);
+for (letter = 'z'; letter >= 'a'; letter--)
+putchar(letter);
 
-  putchar('\n');
+putchar('\n');
 
-  return (0);
+return (0);
 }

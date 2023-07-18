@@ -1,6 +1,6 @@
 /*
- * File: 4-print_alphabt.c
- * Auth: Oluwashina "Sina" Stephen Mathew
+ *File: 4-print_alphabt.c
+ *Auth: Oluwashina "Sina" Stephen Mathew
  */
 
 #include <stdio.h>
@@ -12,15 +12,15 @@
  */
 int main(void)
 {
-  char letter;
+char letter;
 
-  for (letter = 'a'; letter <= 'z'; letter++)
-    {
-      if (letter != 'e' && letter != 'q')
-	putchar(letter);
-    }
+for (letter = 'a'; letter <= 'z'; letter++)
+{
+if (letter != 'e' && letter != 'q')
+putchar(letter);
+}
 
-  putchar('\n');
+putchar('\n');
 
-  return (0);
+return (0);
 }
