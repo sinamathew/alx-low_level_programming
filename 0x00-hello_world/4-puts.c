@@ -7,7 +7,8 @@
 
 /*
  *main - Prints "Programming is like building a multilingual puzzle.
- *Description: This code gave me hard time.
+ *       Function to print
+ *
  *Return: Always 0.
  */
 int main(void)
