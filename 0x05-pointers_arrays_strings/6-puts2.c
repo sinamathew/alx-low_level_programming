@@ -1,15 +1,17 @@
 #include "main.h"
-
 /**
- * main - check the code
+ * puts2 - prints every other character of a string
  *
- * Return: Always 0.
+ * @str: char to check
+ *
+ * Return: 0 is success
  */
-int main(void)
+void puts2(char *str)
 {
-	char *str;
+	int string;
 
-	str = "0123456789";
-	puts2(str);
-	return (0);
+	for (string = 0; str[string] != '\0'; string++)
+		if (string % 2 == 0)
+			_putchar(str[string]);
+	_putchar('\n');
 }

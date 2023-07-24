@@ -1,18 +1,16 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * _strlen - return the length of a string
+ * Owned By Sina
+ * @s: char to check
+ * Description: this will return the length of a string
+ * Return: 0 is success
  */
-int main(void)
+int _strlen(char *s)
 {
-	char *str;
-	int len;
+	int a = 0;
 
-	str = "My first strlen!";
-	len = _strlen(str);
-	printf("%d\n", len);
-	return (0);
+	for (; *s++;)
+		a++;
+	return (a);
 }
