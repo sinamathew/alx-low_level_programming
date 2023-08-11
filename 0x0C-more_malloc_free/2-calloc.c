@@ -13,7 +13,8 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *ptr;
+	char *ptr;
+	unsigned int u;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -23,10 +24,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (ptr == NULL)
 		return (NULL);
 
-	unsigned char *byte_ptr = (unsigned char *)ptr;
-
-	for (unsigned int i = 0; i < nmemb * size; i++)
-		byte_ptr[i] = 0;
+	for (u = 0; u < nmemb * size; u++)
+		byte_ptr[u] = 0;
 
 	return (ptr);
 }
