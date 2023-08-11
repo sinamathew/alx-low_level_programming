@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "main.h"
 
 
 /**
@@ -7,37 +8,40 @@
  * @s2: The second string.
  * @n: The number of bytes from s2 to concatenate.
  *
+ * By Sina Mathew
  * Return: Pointer to the concatenated string, or NULL on failure.
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n) {
-    char *concatenated;
-    unsigned int len1 = 0, len2 = 0, i, j;
 
-    if (s1 == NULL)
-        s1 = "";
-    if (s2 == NULL)
-        s2 = "";
+char *string_nconcat(char *s1, char *s2, unsigned int n)
+{
+	char *concatenated;
+	unsigned int len1 = 0, len2 = 0, i, j;
 
-    while (s1[len1] != '\0')
-        len1++;
-    while (s2[len2] != '\0')
-        len2++;
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-    if (n >= len2)
-        n = len2;
+	while (s1[len1] != '\0')
+		len1++;
+	while (s2[len2] != '\0')
+		len2++;
 
-    concatenated = (char *)malloc(sizeof(char) * (len1 + n + 1));
+	if (n >= len2)
+		n = len2;
 
-    if (concatenated == NULL)
-        return NULL;
+	concatenated = (char *)malloc(sizeof(char) * (len1 + n + 1));
 
-    for (i = 0; i < len1; i++)
-        concatenated[i] = s1[i];
+	if (concatenated == NULL)
+		return (NULL);
 
-    for (j = 0; j < n; j++)
-        concatenated[i + j] = s2[j];
+	for (i = 0; i < len1; i++)
+		concatenated[i] = s1[i];
 
-    concatenated[i + j] = '\0';
+	for (j = 0; j < n; j++)
+		concatenated[i + j] = s2[j];
 
-    return concatenated;
+	concatenated[i + j] = '\0';
+
+	return (concatenated);
 }
