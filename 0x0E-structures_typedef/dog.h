@@ -3,6 +3,7 @@
 
 /**
  * struct dog - C isn't fun
+ * struct dog_t - C isn't fun
  * @name: C isn't fun
  * @age: C isn't fun
  * @owner: C isn't fun
