@@ -38,34 +38,3 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	return (new_dog);
 }
-
-
-/**
- * free_dog - Frees memory allocated for a dog
- * @d: Pointer to the dog to free
- */
-void free_dog(dog_t *d)
-{
-	if (d == NULL)
-		return ();
-
-	free(d->name);
-	free(d->owner);
-	free(d);
-}
-
-int main(void)
-{
-	dog_t *my_dog = new_dog("Ghost", 4.75, "Jon Snow");
-
-	if (my_dog == NULL)
-	{
-		fprintf(stderr, "Failed to create dog\n");
-		return (1);
-	}
-
-
-	free_dog(my_dog);
-
-	return (0);
-}
