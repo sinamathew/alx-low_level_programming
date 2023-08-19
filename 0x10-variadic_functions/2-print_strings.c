@@ -7,24 +7,26 @@
  * @separator: the string to be printed between numbers
  * @n: the number of integers passed to the function
  * @...: variable number of integers
+ * By: Sina Mathew
  */
+
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list args;
-	unsigned int i;
+	va_list abc;
+	unsigned int q;
 
-	va_start(args, n);
+	va_start(abc, q);
 
-	for (i = 0; i < n; i++)
+	for (q = 0; q < n; q++)
 	{
-		printf("%d", va_arg(args, int));
+		printf("%d", va_arg(abc, int));
 
-		if (separator != NULL && i < n - 1)
+		if (separator != NULL && q < n - 1)
 			printf("%s", separator);
 	}
 
 	printf("\n");
 
-	va_end(args);
+	va_end(abc);
 }
 
