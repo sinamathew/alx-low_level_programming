@@ -3,7 +3,7 @@
 /**
  * add_node - Function add new node to the beginning of a list
  * Description: takes a pointer to a pointer to the head element of a list,
- * 		and add (head) and (str) to the list.
+ *		and add (head) and (str) to the list.
  * @head: element
  * @str: element
  * By: Sina Mathew
