@@ -9,13 +9,12 @@
 
 void print_arg(char format, va_list args, int *first_arg)
 {
-	unsigned int i = 0;
 	char *str;
 
-	if (first_arg == 0)
+	if (*first_arg == 0)
 		printf(",");
 
-	switch (format[i])
+	switch (va_arg(args, int))
 	{
 		case 'c':
 			printf("%c", va_arg(args, int));
@@ -55,15 +54,14 @@ void print_arg(char format, va_list args, int *first_arg)
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	unsigned int i = 0;
 	int first_arg = 1;
 
 	va_start(args, format);
 
-	while (format && format[i])
+	while (format && *format[i])
 	{
-		print_arg(format[i], args, &first_arg);
-		i++;
+		print_arg(args, &first_arg);
+		format++;
 	}
 
 	va_end(args);
