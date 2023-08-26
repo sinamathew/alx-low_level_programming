@@ -9,6 +9,7 @@
 
 void print_arg(char format, va_list args, int *first_arg)
 {
+	unsigned int i = 0;
 	char *str;
 
 	if (first_arg == 0)
