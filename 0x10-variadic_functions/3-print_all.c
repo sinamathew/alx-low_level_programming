@@ -32,7 +32,8 @@ void print_arg(char format, va_list args, int *first_arg)
 			str = va_arg(args, char *);
 			if (str == NULL)
 				printf("(nil)");
-			else
+
+			if (str != NULL)
 				printf("%s", str);
 			break;
 
