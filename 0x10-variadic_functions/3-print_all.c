@@ -14,7 +14,7 @@ void print_arg(char format, va_list args, int *first_arg)
 	if (*first_arg == 0)
 		printf(",");
 
-	switch (va_arg(args, int))
+	switch (format)
 	{
 		case 'c':
 			printf("%c", va_arg(args, int));
@@ -55,13 +55,14 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	int first_arg = 1;
+	unsigned int i = 0;
 
 	va_start(args, format);
 
-	while (format && *format[i])
+	while (format && format[i])
 	{
-		print_arg(args, &first_arg);
-		format++;
+		print_arg(format[i], args, &first_arg);
+		i++;
 	}
 
 	va_end(args);
