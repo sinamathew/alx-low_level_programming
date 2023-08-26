@@ -30,11 +30,7 @@ void print_arg(char format, va_list args, int *first_arg)
 
 		case 's':
 			str = va_arg(args, char *);
-			if (str == NULL)
-				printf("(nil)");
-
-			if (str != NULL)
-				printf("%s", str);
+			(str == NULL) ? printf("(nil)") : printf("%s", str);
 			break;
 
 		default:
