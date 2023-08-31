@@ -17,7 +17,7 @@ size_t free_listint_safe(listint_t **head)
 	while (current != NULL)
 	{
 		count++;
-		if (current->next >= current || current->next == head)
+		if (current <= current->next || current->next == *head)
 		{
 			*head = NULL;
 			break;
@@ -26,6 +26,9 @@ size_t free_listint_safe(listint_t **head)
 		temp = current;
 		current = current->next;
 		free(temp);
+
+		if (current == *head)
+			break;
 
 	}
 
