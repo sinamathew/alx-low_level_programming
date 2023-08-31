@@ -15,19 +15,19 @@ size_t print_listint_safe(const listint_t *head)
 
 	while (current != NULL)
 	{
+		if (current->next == loop_start)
+		{
+			printf("-> [%p] %d\n", (void *)current->next, current->next->n);
+			break;
+		}
+
 		printf("[%p] %d\n", (void *)current, current->n);
 		count++;
 
-		if (current->next >= loop_start)
+		if (current->next == NULL)
 		{
-			if (loop_start == NULL)
-				loop_start = current->next;
-
-			if (current->next >= current)
-			{
-				printf("-> [%p] %d\n", (void *)current->next, current->next->n);
-				break;
-			}
+			loop_start = current-> next;
+			break;
 		}
 
 		current = current->next;
