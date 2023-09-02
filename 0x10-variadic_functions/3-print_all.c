@@ -16,6 +16,9 @@ void print_arg(char format, va_list args, int *first_arg)
 
 	*first_arg = 1;
 
+	if (format == NULL)
+		return;
+
 	switch (format)
 	{
 		case 'c':
