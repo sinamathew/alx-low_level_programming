@@ -1,6 +1,32 @@
 #include "dog.h"
 
-#include "dog.h"
+/**
+ * _strdup - custom strdup function
+ * @str: takes the parameter
+ * By: Sina Mathew
+ * Return: str2
+ */
+char *_strdup(char *str)
+{
+	int i;
+	char *str2;
+
+	if (str == NULL)
+		return (NULL);
+
+	str2 = malloc(strlen(str) + 1);
+
+	if (str2 == NULL)
+		return (NULL);
+
+	for (i = 0; str[i]; i++)
+		str2[i] = str[i];
+
+	str2[i] = '\0';
+
+	return (str2);
+}
+
 
 /**
  * new_dog - Creates a new dog
@@ -10,7 +36,6 @@
  *
  * Return: Pointer to the new dog, or NULL if allocation fails
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog;
