@@ -1,6 +1,10 @@
 #ifndef DOG_H
 #define DOG_H
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 /**
  * struct dog - C isn't fun
  * @name: C isn't fun
@@ -10,7 +14,6 @@
  *
  * By: Sina Mathew
  */
-
 struct dog
 {
 	char *name;
