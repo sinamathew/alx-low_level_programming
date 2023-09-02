@@ -73,6 +73,6 @@ void print_str(char *str)
 {
 	if (str == NULL)
 		printf("(nil)");
-	else
-		printf("%s", str);
+
+	printf("%s", str);
 }
