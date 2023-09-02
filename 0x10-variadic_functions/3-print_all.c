@@ -7,7 +7,7 @@
  * By: Sina Mathew
  */
 
-void print_arg(char format, va_list args, int *first_arg)
+void print_arg(const char *format, va_list args, int *first_arg)
 {
 	char *str;
 
