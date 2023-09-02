@@ -11,7 +11,7 @@ void print_arg(char format, va_list args, int *first_arg)
 {
 	char *str;
 
-	if (*first_arg)
+	if (first_arg && *first_arg)
 		printf(", ");
 
 	*first_arg = 1;
