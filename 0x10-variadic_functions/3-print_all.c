@@ -9,8 +9,6 @@
 
 void print_arg(char format, va_list args, int *first_arg)
 {
-	char *str;
-
 	if (*first_arg == 0)
 		printf(", ");
 
