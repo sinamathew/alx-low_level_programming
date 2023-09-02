@@ -10,5 +10,6 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 void print_arg(char format, va_list args, int *first_arg);
+void print_str(char *str);
 
 #endif /* VARIADIC_FUNCTIONS_H */

@@ -14,6 +14,8 @@ void print_arg(char format, va_list args, int *first_arg)
 	if (*first_arg == 0)
 		printf(", ");
 
+	*first_arg = 1;
+
 	switch (format)
 	{
 		case 'c':
@@ -29,8 +31,7 @@ void print_arg(char format, va_list args, int *first_arg)
 			break;
 
 		case 's':
-			str = va_arg(args, char *);
-			(str == NULL) ? printf("(nil)") : printf("%s", str);
+			print_str(va_arg(args, char *));
 			break;
 
 		default:
@@ -64,4 +65,16 @@ void print_all(const char * const format, ...)
 
 	va_end(args);
 	printf("\n");
+}
+
+/**
+ * print_str - print string
+ * @str: points to the character
+ */
+void print_str(char *str)
+{
+	if (str == NULL)
+		printf("(nil)");
+	else
+		printf("%s", str);
 }
