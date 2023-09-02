@@ -19,7 +19,7 @@ void print_arg(const char *format, va_list args, int *first_arg)
 	if (format == NULL)
 		return;
 
-	switch (format)
+	switch (*format)
 	{
 		case 'c':
 			printf("%c", va_arg(args, int));
@@ -65,7 +65,7 @@ void print_all(const char * const format, ...)
 
 	while (format && format[i])
 	{
-		print_arg(format[i], args, &first_arg);
+		print_arg(&format[i], args, &first_arg);
 		i++;
 	}
 
