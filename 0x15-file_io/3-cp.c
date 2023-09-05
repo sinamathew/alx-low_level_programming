@@ -63,7 +63,7 @@ int copy_file(const char * from_filename, const char *to_filename)
 
 	if (rd == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n98\n", from_filename);
+		dprintf(2, "Error: Can't read from file %s\n", from_filename);
 		close(fd_from);
 		close(fd_to);
 		exit(98);
