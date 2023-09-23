@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 /**
  * main - copies the content of one file to another
  * @argc: number of arguments
@@ -21,6 +22,7 @@ int main(int argc, char *argv[])
 	return (0);
 }
 
+
 /**
  * copy_file - copies the content of one file to another
  * @from_filename: name of the source file
@@ -29,7 +31,7 @@ int main(int argc, char *argv[])
  *
  * Return: 0 on success, of exit with error codes on failure
  */
-int copy_file(const char * from_filename, const char *to_filename)
+int copy_file(const char *from_filename, const char *to_filename)
 {
 	int fd_from, fd_to, rd, wr;
 	char buf[1024];
