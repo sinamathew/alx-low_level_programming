@@ -36,7 +36,7 @@ int open_source_file(const char *from_filename, int *fd_from)
 	*fd_from = open(from_filename, O_RDONLY);
 	if (*fd_from == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n" from_filename);
+		dprintf(2, "Error: Can't read from file %s\n", from_filename);
 		return (98);
 	}
 	return (0);
@@ -52,7 +52,7 @@ int open_source_file(const char *from_filename, int *fd_from)
  */
 int open_dest_file(const char *to_filename, int *fd_to)
 {
-	*fd_to = open(to_filename, O_WRONLY | O_CREAT \ O_TRUNc, 0664);
+	*fd_to = open(to_filename, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (*fd_to == -1)
 	{
 		dprintf(2, "Error: Can't write to %s\n", to_filename);
