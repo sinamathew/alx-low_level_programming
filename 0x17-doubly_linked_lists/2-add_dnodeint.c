@@ -5,6 +5,8 @@
  * @head: head of the list
  * @n: value to add
  *
+ * By: Sina Mathew
+ *
  * Return: the added node
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
