@@ -16,7 +16,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		*next = current == NULL ? NULL : current->next;
 
 	for (; current != NULL && index; --index)
-		prevs = current, current = next, next = next == NULL ? NULL : next->next;
+	{
+		prevs = current, current = next;
+		next = next == NULL ? NULL : next->next;
+	}
 	if (current == NULL || index)
 		return (-1);
 	if (prevs == NULL)
