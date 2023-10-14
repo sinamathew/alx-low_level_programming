@@ -8,28 +8,24 @@
  * By: Sina Mathew
  * Return: 1 if the node was deleted, else 0
  */
-
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *prevs = NULL,
+	dlistint_t *prev = NULL,
 		*current = head == NULL ? NULL : *head,
 		*next = current == NULL ? NULL : current->next;
 
 	for (; current != NULL && index; --index)
-	{
-		prevs = current, current = next;
-		next = next == NULL ? NULL : next->next;
-	}
+		prev = current, current = next, next = next == NULL ? NULL : next->next;
 	if (current == NULL || index)
 		return (-1);
-	if (prevs == NULL)
+	if (prev == NULL)
 	{
 		if (next != NULL)
-			next->prevs = NULL;
+			next->prev = NULL;
 		return (free(current), *head = next, 1);
 	}
-	free(current), prevs->next = next;
+	free(current), prev->next = next;
 	if (next != NULL)
-		next->prevs = prevs;
+		next->prev = prev;
 	return (1);
 }
