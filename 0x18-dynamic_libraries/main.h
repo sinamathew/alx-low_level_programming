@@ -4,7 +4,7 @@
 /*---HEADERS*/
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <unistd.h>
 
 /*---PROTOTYPES---*/
 int _putchar(char c);
