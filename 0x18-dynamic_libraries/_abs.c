@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _abs - work on negative numbers
+ * _abs - covert negative numbers to potive
  * @n: the number
  *
  * Return: number
@@ -10,5 +10,7 @@
  */
 int _abs(int n)
 {
-	return (0);
+	if (n < 0)
+		return (-n);
+	return (n);
 }
