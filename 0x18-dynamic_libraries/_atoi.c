@@ -4,7 +4,7 @@
  * _atoi - don't know yet
  * @s: don't know yet
  *
- * Return; Don't know yet
+ * Return: Don't know yet
  *
  * By: Sina Mathew
  */

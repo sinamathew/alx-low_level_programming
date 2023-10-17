@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+ * atoi - lotto code
+ * @str: a void pointer
+ *
+ * Return: 1
+ *
+ * By: Sina Mathew
+ */
 int atoi(const char *str)
 {
 	(void) str;
