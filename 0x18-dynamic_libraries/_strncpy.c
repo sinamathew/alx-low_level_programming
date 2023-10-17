@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncat - opposite of _strcat
+ * _strncpy - opposite of _strcat
  * @dest: pointer to destination
  * @src: pointer to src
  * @n: I don't know
@@ -10,7 +10,7 @@
  *
  * By: Sina Mathew
  */
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 	return (0);
 }
