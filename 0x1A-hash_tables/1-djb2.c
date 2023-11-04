@@ -5,6 +5,8 @@
  * @str: The string to hash.
  *
  * Return: The calculated hash.
+ *
+ * By: Sina Mathew
  */
 unsigned long int hash_djb2(const unsigned char *str)
 {

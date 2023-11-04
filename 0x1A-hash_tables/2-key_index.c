@@ -8,6 +8,8 @@
  *
  * Return: The index of the key.
  * Description: Uses the djb2 algorithm.
+ *
+ * By: Sina Mathew
  */
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
